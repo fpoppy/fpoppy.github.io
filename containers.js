@@ -117,6 +117,7 @@ function setupProjects(list) {
 	});
 };
 
+// set container opening for "i'm up to" and "want art"
 document.querySelector("#commLink").addEventListener('click', (e) => {
 	var commElem = document.querySelector(".commissions");
 	animateContainer(commElem, 800, 800);
@@ -125,6 +126,10 @@ document.querySelector("#commLink").addEventListener('click', (e) => {
 document.querySelector("#projectsLink").addEventListener('click', (e) => {
 	var projectElem = document.querySelector(".projectFolder");
 	animateContainer(projectElem, 600, 500);
+});
+
+document.querySelector(".formLink").addEventListener('click', (e)=>{
+	window.open('https://forms.gle/Fuyap1y53JA72vVk7', '_blank').focus();
 });
 
 // set default z-index

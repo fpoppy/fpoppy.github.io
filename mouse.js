@@ -17,6 +17,7 @@ body.addEventListener('mouseup', (e) => {
 	if (activeCursor == 0)
 	{
 		audio.src = `./cursors/${cursorUpSounds[0]}`;
+		audio.load();
 		audio.play();
 	}
 })
@@ -26,6 +27,7 @@ function setCursor(cursorType)
 	activeCursor = cursorType;
 	body.style.cursor = `url("./cursors/${cursors[cursorType]}_cursor.png"), auto`;
 	audio.src = `./cursors/${cursorDowns[cursorType]}`;
+	audio.load();
 	audio.play();
 }
 
