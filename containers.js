@@ -66,6 +66,13 @@ var projectList = [
 		"text": "Painted this for Czyzc! I don't know how to rock climb, but if you tell me i put the ropes in the wrong spot I will cry."
 	},
 	{
+		"fileName": "pngtuberplus.gif",
+		"type": "image",
+		"width": 400,
+		"thumbnailText": "tuber",
+		"text": "This is the Poppy I use for stream! Made with PNGTuberPlus, a super fun program ot work in."
+	},
+	{
 		"fileName": "kusa.png",
 		"type": "image",
 		"width": 400,
