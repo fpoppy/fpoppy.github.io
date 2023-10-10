@@ -17,10 +17,45 @@ I need js to:
 
 var projectList = [
 	{
+		"fileName": "test.gif",
+		"type": "image",
+		"width": 400,
+		"thumbnailText": "this website!",
+		"text": "Working on this has been a super fun project! I'm ceratinly not a web developer, but I've learned a lot about how jankily I can graft ideas into the Katamari ball of trash that this website is."
+	},
+	{
+		"fileName": "mythic.png",
+		"type": "image",
+		"width": 400,
+		"thumbnailText": "mythic",
+		"text": "Drew this for MythicalRedFox's b-day! happy pets uvu"
+	},
+	{
+		"fileName": "greybday.png",
+		"type": "image",
+		"width": 400,
+		"thumbnailText": "grey",
+		"text": "This was for GreyscaleVixen's b-day! She is a good fox and professional Metazooa player."
+	},
+	{
+		"fileName": "gyoju.png",
+		"type": "image",
+		"width": 400,
+		"thumbnailText": "gyoju",
+		"text": "This one reminds me of my old corvid that i used to take care of... Ahh, My crow pet. (get it)"
+	},
+	{
+		"fileName": "kass.png",
+		"type": "image",
+		"width": 700,
+		"thumbnailText": "kass",
+		"text": "Keliff (at twitch.tv/keliff) hosted another draw together sesh! Maybe you pick up on the things he makes me feel."
+	},
+	{
 		"fileName": "drip.png",
 		"type": "image",
-		"width": 600,
-		"thumbnailText": "dripthedeer!",
+		"width": 500,
+		"thumbnailText": "drip",
 		"text": "redeem random antler"
 	},
 	{
@@ -40,14 +75,14 @@ var projectList = [
 	{
 		"fileName": "project_1.png",
 		"type": "image",
-		"width": 1000,
+		"width": 800,
 		"thumbnailText": "stream sketches",
 		"text": "I was doing some givaways on stream! Rough sketches can be very relaxing if you don't stress too much about the details."
 	},
 	{
 		"fileName": "drawwithroo.png",
 		"type": "image",
-		"width": 500,
+		"width": 700,
 		"thumbnailText": "southpaw",
 		"text": "Keliff (at twitch.tv/keliff) was hosting a draw together sesh of the adorable SouthPaw from Cassette Beasts! I drew some silly gestures for that"
 	}
@@ -66,6 +101,7 @@ function setupProjects(list) {
 		var projectEntry = document.createElement("div");
 		projectEntry.classList.add("projectEntry");
 		projectEntry.setAttribute('id', `projectThumb${index}`);
+		projectEntry.classList.add('undraggable');
 
 		var thumbnail = document.createElement("img");
 		thumbnail.setAttribute('src', `./images/${projectList[index].fileName}`);
@@ -101,6 +137,7 @@ function setupProjects(list) {
 
 		var x = document.createElement('div');
 		x.classList.add('close');
+		x.classList.add('undraggable');
 		x.innerText = 'X';
 
 		projectImageDiv.appendChild(projectImage);
@@ -117,7 +154,22 @@ function setupProjects(list) {
 	});
 };
 
-// set container opening for "i'm up to" and "want art"
+// set container opening for "poppy" "draw and stream" "i'm up to", "want art"
+document.querySelector("#welcomeLink").addEventListener('click', (e) => {
+	var commElem = document.querySelector(".welcome");
+	animateContainer(commElem, 550, 200);
+});
+
+document.querySelector("#poppyLink").addEventListener('click', (e) => {
+	var commElem = document.querySelector(".poppy");
+	animateContainer(commElem, 720, 400);
+});
+
+document.querySelector("#streamLink").addEventListener('click', (e) => {
+	var commElem = document.querySelector(".stream");
+	animateContainer(commElem, 850, 550);
+});
+
 document.querySelector("#commLink").addEventListener('click', (e) => {
 	var commElem = document.querySelector(".commissions");
 	animateContainer(commElem, 800, 800);
@@ -170,8 +222,8 @@ function animateContainer(elem, width, height) {
 	if (elem.style.display == 'block') return;
 	bringToTop(elem);
 
-	var x = Math.floor(Math.random() * (window.innerWidth - width));
-	var y = Math.floor(Math.random() * (window.innerHeight - height));
+	var x = Math.floor(Math.random() * (window.innerWidth - width - 20)) + 20;
+	var y = Math.floor(Math.random() * (window.innerHeight - height - 20)) + 20;
 
 	elem.style.left = x + "px";
 	elem.style.top = y + "px";

@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="style.css">
-		<link rel="icon" type="image/x-icon" href="./favicon.png">
+		<link rel="icon" type="image/x-icon" href="./images/favicon.png">
 		<title>fpop.site</title>
 	</head>
 	<body>
 		<audio id ="audio"></audio>
 		<div class="container landing">
-			<div class="landingTitle animatedContainer" style="width: 215px;">
+			<div class="landingTitle animatedContainer undraggable" id="welcomeLink" style="width: 215px;">
 				<span class="backgroundStrokeContainer">Welcome!</span>
 				<span class="animatedStrokeContainer">
 					<p class="one">W</p><p class="two">e</p><p class="three">l</p><p class="four">c</p><p class="one">o</p><p class="two">m</p><p class="three">e</p><p class="four">!</p>
@@ -21,7 +21,7 @@
 
 			<div class="landingText">
 				<span>- My name is </span>
-				<div class="landingContent animatedContainer" 	style="width: 89px;">
+				<div class="landingContent animatedContainer undraggable" id="poppyLink" style="width: 89px;">
 					<span class="backgroundStrokeContainer">Poppy</span>
 					<span class="animatedStrokeContainer">
 						<p class="one">P</p><p class="two">o</p><p class="three">p</p><p class="four">p</p><p class="one">y</p>
@@ -34,7 +34,7 @@
 
 			<div class="landingText">
 				<span>- i like to </span>
-				<div class="landingContent animatedContainer" style="width: 221px;">
+				<div class="landingContent animatedContainer undraggable" id="streamLink" style="width: 221px;">
 					<span class="backgroundStrokeContainer">draw and stream</span>
 					<span class="animatedStrokeContainer">
 						<p class="one">d</p><p class="two">r</p><p class="three">a</p><p class="four">w</p> <p class="one">a</p><p class="two">n</p><p class="three">d</p> <p class="four">s</p><p class="one">t</p><p class="two">r</p><p class="three">e</p><p class="four">a</p><p class="one">m</p>
@@ -48,7 +48,7 @@
 
 			<div class="landingText">
 				<span>- here's what </span>
-				<div class="landingContent animatedContainer" id="projectsLink" style="width: 115px;">
+				<div class="landingContent animatedContainer undraggable" id="projectsLink" style="width: 115px;">
 					<span class="backgroundStrokeContainer">i'm up to</span>
 					<span class="animatedStrokeContainer"> 
 						<p class="one">i</p><p class="two">'</p><p class="three">m</p> <p class="four">u</p><p class="one">p</p> <p class="two">t</p><p class="three">o</p>
@@ -61,7 +61,7 @@
 
 			<div class="landingText">
 				<span>- </span>
-				<div class="landingContent animatedContainer" id="commLink" style="width: 127px;">
+				<div class="landingContent animatedContainer undraggable" id="commLink" style="width: 127px;">
 					<span class="backgroundStrokeContainer">want art</span>
 					<span class="animatedStrokeContainer">
 						<p class="one">w</p><p class="two">a</p><p class="three">n</p><p class="four">t</p> <p class="one">a</p><p class="two">r</p><p class="three">t</p>
@@ -73,22 +73,44 @@
 			</div>
 		</div>
 		
-		<!-- Change this before deploy -->
-		<div class="container">
-			<iframe
-				src="https://player.twitch.tv/?channel=fpop&parent=fpoppy.github.io"
-				height="300"
-				width="400"
-				>
-			</iframe>
+		<div class="container welcome">
+			Hi! Poppy here, sorry in advance for any jank you may come across, I'm a bird, not an website developer. And rip mobile users. Send me anything I need to desperately fix, and you can always check out my caard at https://fpop.carrd.co/ for a more stable/universally friendly version!
 			<div class="close">x</div>
+		</div>
+
+		<div class="container poppy">
+			<div style="display: flex; padding: 0px 0px 40px 0px;">
+				<div class="undraggable" style="width: 250px; height: 300px; border: 4px solid black; border-radius: 10px;">
+					<!-- It's janky af to use absolute positioning here, but ah well -->
+					<div id="petArea" style="position: absolute; width: 100px; height: 60px; top: 90px; left: 95px;"></div>
+					<div id="boopArea" style="position: absolute; width: 30px; height: 30px; top: 185px; left: 133px;"></div>
+					<div id="chestArea" style="position: absolute; width: 50px; height: 50px; top: 260px; left: 123px;"></div>
+					<img id="poppyImage" src="./poppy/idle.png" style="width:250px; height: 300px; border-radius: 10px; object-fit: cover;">
+				</div>
+				<div style="margin: 25px; width: 250px; display: flex; flex-direction: column; justify-content: space-around; align-items: center; perspective: 200px;">
+					<div class="question undraggable"><i>"Are you a furry?"</i></div>
+					<div class="question undraggable"><i>"What kind of bird are you?"</i></div>
+				</div>
+			</div>
+			<div class="close undraggable">x</div>
+		</div>
+
+		<!-- Change this before deploy -->
+		<div class="container stream">
+			<iframe
+				src="https://player.twitch.tv/?video=v1941735688&parent=fpoppy.github.io&muted=true&autoplay=false"
+				height="450"
+				width="800"
+				class="undraggable">
+			</iframe>
+			<div class="close undraggable">x</div>
 		</div>
 
 
 		<div class="container projectFolder">
 			<div class="projectFolderContainer">
 			</div>
-			<div class="close">x</div>
+			<div class="close undraggable">x</div>
 		</div>
 		
 		<div class="container commissions">
@@ -99,7 +121,7 @@
 / /___/ /_/ / / / / / / / / / / / (__  |__  ) / /_/ / / / (__  )_/  
 \____/\____/_/ /_/ /_/_/ /_/ /_/_/____/____/_/\____/_/ /_/____(_)   
 			</pre>
-			<div class="formLink">Fill out this Google Form if you're interested!</div>
+			<div class="formLink undraggable">Fill out this Google Form if you're interested!</div>
 			<div class="commRow" style="padding: 23px 0 0 0;">
 				<div class="commLabel" style="width: 129px; margin: 0 23px 0 0;">Full Body Colored Sketches $35</div>
 				<img src="./images/sketch_comm_1.png" class="commSketchImage">
@@ -116,15 +138,16 @@
 					<img class="gallerySlide" src="./images/paint_comm_4.png">
 					<img class="gallerySlide" src="./images/paint_comm_5.png">
  
-					<div class="prev">&#10094;</div>
-					<div class="next">&#10095;</div>
+					<div class="prev undraggable">&#10094;</div>
+					<div class="next undraggable">&#10095;</div>
 				</div>
 				<div class="commLabel" style="width: 129px; margin: 0 23px 0 0;">Paintings &nbsp; $100 &nbsp; (+$25 per extra char)</div>
 			</div>
-			<div class="close">x</div>
+			<div class="close undraggable">x</div>
 		</div>
 		
 		<canvas id="c"></canvas>
+		<script src="poppy.js"></script>
 		<script src="gallery.js"></script>
 		<script src="mouse.js"></script>
 		<script src="containers.js"></script>

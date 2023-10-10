@@ -1,11 +1,16 @@
 @font-face {
 	font-family: SundayHotdog;
-	src: url('./Sunday\ Hotdog.otf');
+	src: url('./fonts/Sunday\ Hotdog.otf');
 }
 
 @font-face {
 	font-family: SIMSUN;
-	src: url('./SIMSUN.ttf');
+	src: url('./fonts/SIMSUN.ttf');
+}
+
+@font-face {
+	font-family: rainyhearts;
+	src: url('./fonts/rainyhearts.ttf');
 }
 
 html, body {
@@ -45,10 +50,17 @@ p {
 	font-size: 50px;
 	bottom: 10px; 
 	right: 20px;
-	width: 50px;
+	width: 30px;
 	margin: 0;
 	padding: 0;
 	text-align: right;
+
+	color: black;
+	transition: color 0.1s;
+}
+
+.close:hover {
+	color: red;
 }
 
 /* landing container setup */
@@ -107,11 +119,62 @@ p {
 
 	background-clip: text;
 	-webkit-text-fill-color: white;
-	background-image: url("./rainbowgradient.png");
+	background-image: url("./images/rainbowgradient.png");
 	background-size: cover;
 
 	z-index: 2;
 	position: absolute;
+}
+
+/* welcome */
+.welcome {
+	font-family: SimSun;
+	font-size: 20px;
+
+	width: 500px;
+
+	padding: 25px 25px 40px 25px;
+	display: none;
+	opacity: 0;
+
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+}
+
+/* poppy popup */
+.poppy {
+	padding: 25px;
+	display: none;
+	opacity: 0;
+
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+}
+
+.question {
+	font-family: rainyhearts;
+	font-size: 30px;
+	
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+
+	border-radius: 10px;
+	background-color: lightpink;
+
+	transform: rotateY(-5deg);
+	transition: transform 0.3s;
+}
+
+.question:hover {
+	transform: rotateY(5deg);
+}
+
+/* stream */
+.stream {
+	padding: 20px 20px 60px 20px;
+	display: none;
+	opacity: 0;
+
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
 }
 
 /* projects container */
@@ -128,7 +191,7 @@ p {
 .projectFolderContainer {
 	max-width: 600px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	padding: 10px;
 }
