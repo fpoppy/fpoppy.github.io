@@ -118,6 +118,7 @@ p {
 	color: white;
 
 	background-clip: text;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: white;
 	background-image: url("./images/rainbowgradient.png");
 	background-size: cover;
@@ -328,7 +329,7 @@ p {
 
 /* landing animations uvu */
 .animatedContainer:hover .animatedTextContainer {
-	animation: textColorAnimation 0.2s linear forwards;
+	/* animation: textColorAnimation 0.2s linear forwards; */
 }
 
 @keyframes textColorAnimation {
