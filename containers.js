@@ -17,6 +17,20 @@ I need js to:
 
 var projectList = [
 	{
+		"fileName": "pznakey.png",
+		"type": "image",
+		"width": 700,
+		"thumbnailText": "prawnzo",
+		"text": "Prawnzo's sona has such a lovely story, I hope I captured their friendliness!"
+	},
+	{
+		"fileName": "wulvezref.png",
+		"type": "image",
+		"width": 700,
+		"thumbnailText": "wulvez",
+		"text": "I drew a refsheet for Wulvez! It's a lot of pressure drawing refs, but I'm happy with how it turned out!"
+	},
+	{
 		"fileName": "test.gif",
 		"type": "image",
 		"width": 400,
@@ -78,13 +92,6 @@ var projectList = [
 		"width": 400,
 		"thumbnailText": "kusalito",
 		"text": "feliz huevos uvu"
-	},
-	{
-		"fileName": "project_1.png",
-		"type": "image",
-		"width": 800,
-		"thumbnailText": "stream sketches",
-		"text": "I was doing some givaways on stream! Rough sketches can be very relaxing if you don't stress too much about the details."
 	},
 	{
 		"fileName": "drawwithroo.png",
