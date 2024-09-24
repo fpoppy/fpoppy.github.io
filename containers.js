@@ -17,18 +17,39 @@ I need js to:
 
 var projectList = [
 	{
-		"fileName": "pznakey.png",
+		"fileName": "merle.png",
 		"type": "image",
 		"width": 700,
-		"thumbnailText": "prawnzo",
-		"text": "Prawnzo's sona has such a lovely story, I hope I captured their friendliness!"
+		"thumbnailText": "katz",
+		"text": "My last painting comm for Merle and Zuna! I think it turned out well!"
+	},
+	{
+		"fileName": "badgermaw.png",
+		"type": "image",
+		"width": 400,
+		"thumbnailText": "badgermaw",
+		"text": "My last fullbody comm for badgermaw! Shoutout to Peglin"
+	},
+	{
+		"fileName": "lemon.png",
+		"type": "image",
+		"width": 700,
+		"thumbnailText": "lemon",
+		"text": "A refsheet for LemonPoppyseedGames! We love and support fellow Poppies"
+	},
+	{
+		"fileName": "solrent.png",
+		"type": "image",
+		"width": 700,
+		"thumbnailText": "solrent",
+		"text": "A painting comm for Solrent! Shoutout to my boyfriend for helping me with the lighting uvu"
 	},
 	{
 		"fileName": "wulvezref.png",
 		"type": "image",
 		"width": 700,
 		"thumbnailText": "wulvez",
-		"text": "I drew a refsheet for Wulvez! It's a lot of pressure drawing refs, but I'm happy with how it turned out!"
+		"text": "I drew a refsheet for Wulvez!"
 	},
 	{
 		"fileName": "test.gif",
@@ -38,27 +59,6 @@ var projectList = [
 		"text": "Working on this has been a super fun project! I'm ceratinly not a web developer, but I've learned a lot about how jankily I can graft ideas into the Katamari ball of trash that this website is."
 	},
 	{
-		"fileName": "mythic.png",
-		"type": "image",
-		"width": 400,
-		"thumbnailText": "mythic",
-		"text": "Drew this for MythicalRedFox's b-day! happy pets uvu"
-	},
-	{
-		"fileName": "greybday.png",
-		"type": "image",
-		"width": 400,
-		"thumbnailText": "grey",
-		"text": "This was for GreyscaleVixen's b-day! She is a good fox and professional Metazooa player."
-	},
-	{
-		"fileName": "gyoju.png",
-		"type": "image",
-		"width": 400,
-		"thumbnailText": "gyoju",
-		"text": "This one reminds me of my old corvid that i used to take care of... Ahh, My crow pet. (get it)"
-	},
-	{
 		"fileName": "kass.png",
 		"type": "image",
 		"width": 700,
@@ -66,41 +66,12 @@ var projectList = [
 		"text": "Keliff (at twitch.tv/keliff) hosted another draw together sesh! Maybe you pick up on the things he makes me feel."
 	},
 	{
-		"fileName": "drip.png",
-		"type": "image",
-		"width": 500,
-		"thumbnailText": "drip",
-		"text": "redeem random antler"
-	},
-	{
 		"fileName": "rockclimbinsfw.png",
 		"type": "image",
 		"width": 700,
 		"thumbnailText": "cz comm!",
 		"text": "Painted this for Czyzc! I don't know how to rock climb, but if you tell me i put the ropes in the wrong spot I will cry."
-	},
-	{
-		"fileName": "pngtuberplus.gif",
-		"type": "image",
-		"width": 400,
-		"thumbnailText": "tuber",
-		"text": "This is the Poppy I use for stream! Made with PNGTuberPlus, a super fun program ot work in."
-	},
-	{
-		"fileName": "kusa.png",
-		"type": "image",
-		"width": 400,
-		"thumbnailText": "kusalito",
-		"text": "feliz huevos uvu"
-	},
-	{
-		"fileName": "drawwithroo.png",
-		"type": "image",
-		"width": 700,
-		"thumbnailText": "southpaw",
-		"text": "Keliff (at twitch.tv/keliff) was hosting a draw together sesh of the adorable SouthPaw from Cassette Beasts! I drew some silly gestures for that"
 	}
-
 ]
 
 setupProjects(projectList);
